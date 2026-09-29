@@ -7,8 +7,8 @@ def call(Map config = [:]) {
     def imageTag = config.imageTag ?: error("Image tag is required")
     def manifestsPath = config.manifestsPath ?: 'kubernetes'
     def gitCredentials = config.gitCredentials ?: 'github-credentials'
-    def gitUserName = config.gitUserName ?: 'Jenkins CI'
-    def gitUserEmail = config.gitUserEmail ?: 'jenkins@example.com'
+    def gitUserName = config.gitUserName ?: 'manishvishwakarma89'
+    def gitUserEmail = config.gitUserEmail ?: 'manish.kumar.v@ramanujan.du.ac.in'
     
     echo "Updating Kubernetes manifests with image tag: ${imageTag}"
     
@@ -25,7 +25,7 @@ def call(Map config = [:]) {
         
         // Update deployment manifests with new image tags - using proper Linux sed syntax
         sh """
-            # Update main application deployment - note the correct image name is trainwithshubham/easyshop-app
+            # Update main application deployment - note the correct image name is manishvishwa801/easyshop-dhi
             sed -i "s|image: manishvishwa801/easyshop-dhi:.*|image: manishvishwa801/easyshop-dhi:${imageTag}|g" ${manifestsPath}/08-easyshop-deployment.yaml
             
             # Update migration job if it exists
