@@ -9,7 +9,7 @@ def call(Map config = [:]) {
     def gitCredentials = config.gitCredentials ?: 'github-credentials'
     def gitUserName = config.gitUserName ?: 'manishvishwakarma89'
     def gitUserEmail = config.gitUserEmail ?: 'manish.kumar.v@ramanujan.du.ac.in'
-    def gitBranch = config.gitBranch ?: 'main'
+    def gitBranch = config.gitBranch ?: 'feat/hackathon'
     def appImage = config.appImage ?: 'manishvishwa801/easyshop-dhi'
     def migrationImage = config.migrationImage ?: 'manishvishwa801/easyshop-migration'
 
